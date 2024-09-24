@@ -1,0 +1,72 @@
+@import "../../css/variables.css";
+
+.menu__wrapper {
+    padding: 32px;
+    width: 252px;
+    height: 1024px;
+}
+
+.menu__header div {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.menu__logo {
+    padding: 3.33px;
+    width: 34px;
+    height: 34px;
+}
+
+.menu__title {
+    padding-left: 12px;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 48px;
+    letter-spacing: -0.03em;
+}
+
+.menu__list {
+    padding-top: 60px;
+}
+
+.item-icon {
+    pointer-events:none;
+}
+
+.item-text {
+    padding-left: 12px;
+}
+
+.menu__list ul {
+    padding: 0;
+    list-style: none;
+}
+
+.menu__list li {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px 10px 20px;
+    width: 188px;
+    height: 44px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+}
+
+.menu__list a {
+    text-decoration: none;
+    color: var(--color-secondary-300);
+}
+
+.menu__list li:hover {
+    background-color: var(--color-ghost-white);
+}
+
+.menu__list li:hover .item-text {
+    color: var(--color-secondary-500);
+}
+
+.menu__list li:hover .item-icon {
+    filter: hue-rotate(0.93deg) saturate(100.37%) brightness(25.88%);
+}
