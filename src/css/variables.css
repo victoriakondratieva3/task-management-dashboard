@@ -1,7 +1,15 @@
 :root {
     --color-white: #ffffff;
-    --color-ghost-white: #F5F5F7;
+    --color-white-100: #f9f9f9;
+    --color-white-200: #f1f1f1;
     --color-black: #000000;
+
+    --color-primary-100: #dce4ff;
+    --color-primary-500: #546fff;
+    --color-primary-500-t2: #526cff33;
+
+    --color-secondary-100: #dfe1f3;
+    --color-secondary-200: #c2c6e8;
     --color-secondary-300: #8e92bc;
     --color-secondary-500: #141522;
 }

@@ -1,0 +1,44 @@
+.tt {
+    width: 194px;
+    height: 214px;
+    background-color: var(--color-secondary-500);
+    border-radius: 10px;
+    padding: 20px;
+    gap: 16px;
+}
+
+.tt-title {
+    color: var(--color-white);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: -0.02em;
+}
+
+.tt-section {
+    gap: 18px;
+}
+
+.tt-completed-count {
+    color: var(--color-white);
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 48px;
+    letter-spacing: -0.03em;
+}
+
+.tt-total {
+    color: var(--color-white);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    letter-spacing: -0.02em;
+}
+
+.tt-course-label {
+    color: var(--color-secondary-300);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+    letter-spacing: -0.02em;
+}

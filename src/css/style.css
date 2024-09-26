@@ -1,0 +1,27 @@
+.d-flex {
+    display: flex;
+}
+
+.d-grid {
+    display: grid;
+}
+
+.hv-center {
+    justify-self: center;
+    align-self: center;
+}
+
+.r-group {
+    display: flex;
+    flex-direction: row;
+}
+
+.c-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.div-circle {
+    overflow: hidden;
+    border-radius: 50%;
+}

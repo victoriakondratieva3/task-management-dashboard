@@ -1,23 +1,25 @@
 @import "../../css/variables.css";
 
-.menu__wrapper {
+.menu {
+    position: sticky;    
+    left: 0;
     padding: 32px;
     width: 252px;
-    height: 1024px;
+    height: 100%;
 }
 
-.menu__header div {
+.menu-header div {
     display: inline-block;
     vertical-align: middle;
 }
 
-.menu__logo {
+.menu-logo {
     padding: 3.33px;
     width: 34px;
     height: 34px;
 }
 
-.menu__title {
+.menu-title {
     padding-left: 12px;
     font-size: 32px;
     font-weight: 600;
@@ -25,24 +27,24 @@
     letter-spacing: -0.03em;
 }
 
-.menu__list {
+.menu-list {
     padding-top: 60px;
 }
 
-.item-icon {
-    pointer-events:none;
+.menu-item-icon {
+    pointer-events: none;
 }
 
-.item-text {
+.menu-item-text {
     padding-left: 12px;
 }
 
-.menu__list ul {
+.menu-list ul {
     padding: 0;
     list-style: none;
 }
 
-.menu__list li {
+.menu-list li {
     display: flex;
     align-items: center;
     padding: 10px 20px 10px 20px;
@@ -54,19 +56,19 @@
     letter-spacing: -0.02em;
 }
 
-.menu__list a {
+.menu-list a {
     text-decoration: none;
     color: var(--color-secondary-300);
 }
 
-.menu__list li:hover {
-    background-color: var(--color-ghost-white);
+.menu-list li:hover {
+    background-color: var(--color-white-100);
 }
 
-.menu__list li:hover .item-text {
+.menu-list li:hover .menu-item-text {
     color: var(--color-secondary-500);
 }
 
-.menu__list li:hover .item-icon {
+.menu-list li:hover .menu-item-icon {
     filter: hue-rotate(0.93deg) saturate(100.37%) brightness(25.88%);
 }

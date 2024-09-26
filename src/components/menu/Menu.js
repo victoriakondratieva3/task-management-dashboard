@@ -13,46 +13,68 @@ import './Menu.css';
 export default class Menu extends React.Component {
   render() {
     return (
-      <div className="menu__wrapper">
-        <div className="menu__header">
-          <div className="menu__logo">
+      <div className="menu">
+        <div className="menu-header">
+          <div className="menu-logo">
             <object type="image/svg+xml" data={Logo} />
           </div>
-          <div className="menu__title">DNX</div>
+          <div className="menu-title">DNX</div>
         </div>
-        <nav className="menu__list">
-          <ul>
-            <NavLink to="/">
-              <li>
-                <object className="item-icon" type="image/svg+xml" data={CategoryIcon} />
-                <span className="item-text">Overview</span>
-              </li>
-            </NavLink>
-            <NavLink to="/">
-              <li>
-                <object className="item-icon" type="image/svg+xml" data={BookIcon} />
-                <span className="item-text">Task</span>
-              </li>
-            </NavLink>
-            <NavLink to="/">
-              <li>
-                <object className="item-icon" type="image/svg+xml" data={UserOctagonIcon} />
-                <span className="item-text">Mentors</span>
-              </li></NavLink>
-            <NavLink to="/">
-              <li>
-                <object className="item-icon" type="image/svg+xml" data={MessageIcon} />
-                <span className="item-text">Message</span>
-              </li>
-            </NavLink>
-            <NavLink to="/">
-              <li>
-                <object className="item-icon" type="image/svg+xml" data={SettingIcon} />
-                <span className="item-text">Settings</span>
-              </li>
-            </NavLink>
-          </ul>
-        </nav>
+        <aside>
+          <nav className="menu-list">
+            <ul>
+              <NavLink to="/">
+                <li>
+                  <object 
+                    className="menu-item-icon"
+                    type="image/svg+xml"
+                    data={CategoryIcon} 
+                  />
+                  <span className="menu-item-text">Overview</span>
+                </li>
+              </NavLink>
+              <NavLink to="/">
+                <li>
+                  <object 
+                    className="menu-item-icon" 
+                    type="image/svg+xml" 
+                    data={BookIcon} 
+                  />
+                  <span className="menu-item-text">Task</span>
+                </li>
+              </NavLink>
+              <NavLink to="/">
+                <li>
+                  <object 
+                    className="menu-item-icon" 
+                    type="image/svg+xml"
+                    data={UserOctagonIcon} 
+                  />
+                  <span className="menu-item-text">Mentors</span>
+                </li></NavLink>
+              <NavLink to="/">
+                <li>
+                  <object 
+                    className="menu-item-icon" 
+                    type="image/svg+xml" 
+                    data={MessageIcon} 
+                  />
+                  <span className="menu-item-text">Message</span>
+                </li>
+              </NavLink>
+              <NavLink to="/">
+                <li>
+                  <object 
+                    className="menu-item-icon" 
+                    type="image/svg+xml" 
+                    data={SettingIcon} 
+                  />
+                  <span className="menu-item-text">Settings</span>
+                </li>
+              </NavLink>
+            </ul>
+          </nav>
+        </aside>
       </div>
     );
   }

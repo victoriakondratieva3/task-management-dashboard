@@ -1,0 +1,25 @@
+.circle-progress-bar {
+    width: 68px;
+    height: 68px;
+}
+
+.base-circle {
+    stroke: var(--color-primary-500-t2);
+    fill: none;
+    stroke-width: 3;
+}
+
+.progress-circle {
+    stroke: var(--color-primary-500);
+    fill: none;
+    stroke-width: 3;
+    stroke-dasharray: 100;
+    stroke-linecap: round;
+}
+
+.progress-value {
+    fill: var(--color-white);
+    text-anchor: middle;
+    font-size: 18px;
+    font-weight: 400;
+}
