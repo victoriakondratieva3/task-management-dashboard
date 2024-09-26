@@ -13,7 +13,6 @@
     stroke: var(--color-primary-500);
     fill: none;
     stroke-width: 3;
-    stroke-dasharray: 100;
     stroke-linecap: round;
 }
 

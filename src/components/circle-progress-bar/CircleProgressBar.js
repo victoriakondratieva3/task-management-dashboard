@@ -1,33 +1,48 @@
-import React from "react";
+import React, { useEffect, useState, useRef } from 'react';
 
 import './CircleProgressBar.css';
 
-export function CircleProgressBar(props) {
-  const completionPercentage = calculatePercentage(props.total, props.completed);
+const CircleProgressBar = props => {
+    const [offset, setOffset] = useState(0);
+    const circleRef = useRef(null);
+    const { progress } = props;
 
-  return (
-    <svg className="circle-progress-bar" viewBox="0 0 68 68" >
-      <circle 
-        className="base-circle" 
-        cx="34" cy="34" r="32" 
-      />
-      <circle 
-        className="progress-circle" 
-        cx="34" cy="34" r="32" 
-        stroke-dashoffset={completionPercentage}
-      />
-      <text 
-        className="progress-value" x="34" y="42">{completionPercentage}%</text>
-    </svg>
-  );
-}
+    const center = 68 / 2;
+    const radius = 68 / 2 - 5 / 2;
+    const circumference = 2 * Math.PI * radius;
 
-function calculatePercentage(total, completed) {
-  if (total === 0) {
-    return 0;
-  }
-  const completionPercentage = (completed / total) * 100;
-  return Math.round(completionPercentage);
+    useEffect(() => {
+        const progressOffset = ((100 - progress) / 100) * circumference;
+        setOffset(progressOffset);
+        circleRef.current.style = 'transition: stroke-dashoffset 850ms ease-in-out;';
+    }, [setOffset, circumference, progress, offset]);
+
+    return (
+        <>
+            <svg className="circle-progress-bar">
+                <circle
+                    className="base-circle"
+                    cx={center}
+                    cy={center}
+                    r={radius}
+                />
+                <circle
+                    className="progress-circle"
+                    ref={circleRef}
+                    cx={center}
+                    cy={center}
+                    r={radius}
+                    strokeDasharray={circumference}
+                    strokeDashoffset={offset}
+                />
+                <text x={center} 
+                    y="40" 
+                    className="progress-value">
+                        {progress}%
+                </text>
+            </svg>
+        </>
+    )
 }
 
 export default CircleProgressBar;

@@ -13,7 +13,7 @@ export function Main() {
         <div className="main-container">
           <TaskTracker
             totalTasks={120}
-            completedTasks={80}
+            completedTasks={10}
           />
         </div>
       </div>

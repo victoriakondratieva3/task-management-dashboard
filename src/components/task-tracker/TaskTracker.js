@@ -7,6 +7,7 @@ import './TaskTracker.css';
 export function TaskTracker(props) {
   const totalTasks = props.totalTasks;
   const completedTasks = props.completedTasks;
+  const completionPercentage = calculatePercentage(totalTasks, completedTasks);
 
   return (
     <div className="tt d-grid">
@@ -14,8 +15,7 @@ export function TaskTracker(props) {
       <div className="tt-completed-count">{completedTasks}</div>
       <div className="tt-section r-group">
         <CircleProgressBar 
-          total={totalTasks} 
-          completed={completedTasks} 
+          progress={completionPercentage}
         />
         <div className="tt-course hv-center">
           <div className="tt-total">{totalTasks}</div>
@@ -24,6 +24,14 @@ export function TaskTracker(props) {
       </div>
     </div>
   );
+}
+
+function calculatePercentage(total, completed) {
+  if (total === 0) {
+    return 0;
+  }
+  const completionPercentage = (completed / total) * 100;
+  return Math.round(completionPercentage);
 }
 
 export default TaskTracker;
